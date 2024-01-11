@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./clock.png">
+    <title>Дата и время</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="appNumb">
+        <div class="appNumbSec appNumb1 appNumb1_1">00</div>
+        <div class="appNumbSec appNumb1 appNumb1_2">05</div>
+        <div class="appNumbSec appNumb1 appNumb1_3">10</div>
+        <div class="appNumbSec appNumb1 appNumb1_4">01</div>
+        <div class="appNumbSec appNumb1 appNumb1_5">06</div>
+        <div class="appNumbSec appNumb1 appNumb1_6">11</div>
+        <div class="appNumbSec appNumb1 appNumb1_7">02</div>
+        <div class="appNumbSec appNumb1 appNumb1_8">07</div>
+        <div class="appNumbSec appNumb1 appNumb1_9">12</div>
+        <div class="appNumbSec appNumb1 appNumb1_10">03</div>
+        <div class="appNumbSec appNumb1 appNumb1_11">08</div>
+        <div class="appNumbSec appNumb1 appNumb1_12">13</div>
+        <div class="appNumbSec appNumb1 appNumb1_13">04</div>
+        <div class="appNumbSec appNumb1 appNumb1_14">09</div>
+        <div class="appNumbSec appNumb1 appNumb1_15">14</div>
+      </div>
+      <div class="appNumb appNumbBorder">
+        <div class="appNumbSec appNumb2 appNumb2_1">15</div>
+        <div class="appNumbSec appNumb2 appNumb2_2">20</div>
+        <div class="appNumbSec appNumb2 appNumb2_3">25</div>
+        <div class="appNumbSec appNumb2 appNumb2_4">16</div>
+        <div class="appNumbSec appNumb2 appNumb2_5">21</div>
+        <div class="appNumbSec appNumb2 appNumb2_6">26</div>
+        <div class="appNumbSec appNumb2 appNumb2_7">17</div>
+        <div class="appNumbSec appNumb2 appNumb2_8">22</div>
+        <div class="appNumbSec appNumb2 appNumb2_9">27</div>
+        <div class="appNumbSec appNumb2 appNumb2_10">18</div>
+        <div class="appNumbSec appNumb2 appNumb2_11">23</div>
+        <div class="appNumbSec appNumb2 appNumb2_12">28</div>
+        <div class="appNumbSec appNumb2 appNumb2_13">19</div>
+        <div class="appNumbSec appNumb2 appNumb2_14">24</div>
+        <div class="appNumbSec appNumb2 appNumb2_15">29</div>
+      </div>
+      <div class="appNumb">
+        <div class="appNumbSec appNumb3 appNumb3_1">30</div>
+        <div class="appNumbSec appNumb3 appNumb3_2">35</div>
+        <div class="appNumbSec appNumb3 appNumb3_3">40</div>
+        <div class="appNumbSec appNumb3 appNumb3_4">31</div>
+        <div class="appNumbSec appNumb3 appNumb3_5">36</div>
+        <div class="appNumbSec appNumb3 appNumb3_6">41</div>
+        <div class="appNumbSec appNumb3 appNumb3_7">32</div>
+        <div class="appNumbSec appNumb3 appNumb3_8">37</div>
+        <div class="appNumbSec appNumb3 appNumb3_9">42</div>
+        <div class="appNumbSec appNumb3 appNumb3_10">33</div>
+        <div class="appNumbSec appNumb3 appNumb3_11">38</div>
+        <div class="appNumbSec appNumb3 appNumb3_12">43</div>
+        <div class="appNumbSec appNumb3 appNumb3_13">34</div>
+        <div class="appNumbSec appNumb3 appNumb3_14">39</div>
+        <div class="appNumbSec appNumb3 appNumb3_15">44</div>
+      </div>
+      <div class="appNumb">
+        <div class="appNumbSec appNumb4 appNumb4_1">45</div>
+        <div class="appNumbSec appNumb4 appNumb4_2">50</div>
+        <div class="appNumbSec appNumb4 appNumb4_3">55</div>
+        <div class="appNumbSec appNumb4 appNumb4_4">46</div>
+        <div class="appNumbSec appNumb4 appNumb4_5">51</div>
+        <div class="appNumbSec appNumb4 appNumb4_6">56</div>
+        <div class="appNumbSec appNumb4 appNumb4_7">47</div>
+        <div class="appNumbSec appNumb4 appNumb4_8">52</div>
+        <div class="appNumbSec appNumb4 appNumb4_9">57</div>
+        <div class="appNumbSec appNumb4 appNumb4_10">48</div>
+        <div class="appNumbSec appNumb4 appNumb4_11">53</div>
+        <div class="appNumbSec appNumb4 appNumb4_12">58</div>
+        <div class="appNumbSec appNumb4 appNumb4_13">49</div>
+        <div class="appNumbSec appNumb4 appNumb4_14">54</div>
+        <div class="appNumbSec appNumb4 appNumb4_15">59</div>
+      </div>
+    </div>
+    <div class="date"></div>
+    <script>
+      var now
+
+        let arrCloc = [];
+        let arrHM = "";
+
+        let strDate = ''
+
+        function addGlobDate() {
+          now = new Date();
+          let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+          let month = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря']
+          strDate = `${days[now.getDay()]} ${now.getDate().toString()} ${month[now.getMonth()]} ${now.getFullYear()} года`
+          document.querySelector('.date').innerHTML = strDate
+        }
+        addGlobDate()
+
+        function addGlobTime() {
+          now = new Date();
+          arrCloc = [];
+          arrHM = ''
+          arrCloc.push(now.getHours().toString());
+          arrCloc.push(now.getMinutes().toString());
+          arrCloc.push(now.getSeconds().toString());
+
+          arrCloc.forEach((e, i) => {
+            if (e.length === 1) arrCloc.splice(i, 1, `0${e}`);
+          });
+          arrHM = arrCloc[0] + arrCloc[1];
+
+        }
+
+        addGlobTime();
+
+        function addNumb(it, ind) {
+          document
+            .querySelectorAll(`.appNumb${ind}`)
+            .forEach((e) => e.classList.remove("numbAction"));
+          if (it === "0") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_4`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_10`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "1") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_5`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_11`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "2") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_10`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "3") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            // document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "4") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_4`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "5") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_4`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "6") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_4`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_10`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "7") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_11`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+          } else if (it === "8") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_4`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_10`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          } else if (it === "9") {
+            document.querySelector(`.appNumb${ind}_1`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_2`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_3`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_4`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_6`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_7`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_8`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_9`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_12`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_13`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_14`).classList.add("numbAction");
+            document.querySelector(`.appNumb${ind}_15`).classList.add("numbAction");
+          }
+        }
+
+        function setGlobTime() {
+          for (let i = 1; i < 5; i++) {
+            addNumb(`${arrHM[i - 1]}`, i);
+          }
+
+        }
+        setGlobTime();
+
+        let sec = arrCloc[2];
+
+        function setSecond(second) {
+
+          setGlobTime();
+          if (arrCloc[0] === '00' && arrCloc[1] === '00' && second === 0) addGlobDate()
+
+          document.querySelectorAll(".appNumbSec").forEach((el, ind) => {
+            el.classList.remove("secAction");
+            if (second < 10) {
+              let secStr = '0' + second
+              if (el.textContent === secStr) {
+                el.classList.remove("numbAction");
+                el.classList.add("secAction");
+              }
+
+            } else if (el.textContent === second.toString()) {
+              el.classList.remove("numbAction");
+              el.classList.add("secAction");
+            }
+          });
+
+          sec++;
+          if (sec === 60) {
+            sec = 0;
+            addGlobTime();
+          }
+        }
+
+        setInterval(() => {
+          setSecond(sec);
+        }, 1000);
+
+    </script>
+  </body>
+</html>
