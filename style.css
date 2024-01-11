@@ -1,0 +1,60 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #000000;
+  font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+  color: #1f1f1f;
+}
+.app{
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  height: 260px;
+  margin: 20px auto;
+}
+.appNumb{
+  height: 100%;
+  width: 23%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+.appNumbSec{
+  width: 33%;
+  height: 20%;
+  font-size: 40px;
+  text-align: center;
+}
+.secAction{
+  color:#ffa500
+}
+.numbAction{
+  color: #ffffff;
+}
+.appNumbBorder{
+  padding-right: 12px;
+  border-right: solid 3px #ffffff33;
+}
+.date{
+  font-size: 35px;
+  max-width: max-content;
+  margin: 0px auto;
+  text-align: center;
+}
+@media only screen and (max-width: 505px)  {
+
+  .appNumbSec{
+    font-size: 25px;
+  }
+  .date{
+    max-width: max-content;
+    margin: 0px auto;
+  }
+  .app {
+    max-width: 500px;
+  }
+
+}
