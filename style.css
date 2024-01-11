@@ -8,6 +8,8 @@ body{
 	font-weight: 300;
   color: #1f1f1f;
 }
+
+
 .app{
 
   -webkit-touch-callout: none; /* iOS Safari */
@@ -46,6 +48,12 @@ body{
   border-right: solid 3px #ffffff33;
 }
 .date{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
   font-size: 35px;
   max-width: max-content;
   margin: 0px auto;
